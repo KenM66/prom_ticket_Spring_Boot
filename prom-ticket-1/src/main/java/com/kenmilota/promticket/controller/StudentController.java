@@ -43,6 +43,10 @@ public class StudentController {
 		return service.deleteById(id);
 		
 	}
+	@GetMapping("/studentById/{id}")
+	public Student findStudentById(@PathVariable int id) {
+		return service.getStudentById(id);
+	}
 	
 
 }

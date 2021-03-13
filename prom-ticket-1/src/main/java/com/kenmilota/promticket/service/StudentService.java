@@ -39,4 +39,8 @@ public class StudentService {
 		repository.deleteById(id);
 		return "Student "+id+" has been removed from the database";
 	}
+	public Student getStudentById(int id) {
+		return repository.findById(id).orElse(null);
+	
+	}
 }
